@@ -1,0 +1,11 @@
+spring:
+  config:
+    activate:
+      on-profile: postgress
+name: postgress
+enabled: true
+jpa:
+  show-sql: true
+graphql:
+  servlet:
+    mapping: /graphql

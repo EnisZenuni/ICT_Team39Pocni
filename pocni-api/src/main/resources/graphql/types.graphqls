@@ -1,0 +1,7 @@
+type Applicant {
+    id: ID
+    firstName: String!
+    lastName: String!
+    email: String!
+    LocalDate: String
+}
