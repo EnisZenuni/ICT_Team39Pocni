@@ -1,17 +1,16 @@
 package team39.pocniapi.domain;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
+@Builder
 @Table(name = "Applicant")
 public class Applicant {
     @Id
@@ -28,7 +27,7 @@ public class Applicant {
     @NonNull
     private String email;
 
-    @NonNull
+
     private LocalDate dateOfBirth;
 
     @NonNull

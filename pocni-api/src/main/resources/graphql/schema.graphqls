@@ -1,3 +1,7 @@
 type Query {
     applicant(id: ID!): Applicant!
 }
+
+type Mutation {
+    createApplicant(input: ApplicantCreateInput!): Applicant!
+}

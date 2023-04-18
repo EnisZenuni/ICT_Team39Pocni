@@ -9,7 +9,7 @@ import team39.pocniapi.domain.ApplicantDto;
 
 @Controller
 @RequiredArgsConstructor
-public class ApplicantController {
+public class ApplicantQueryController {
     private final ApplicantService applicantService;
 
     @QueryMapping
