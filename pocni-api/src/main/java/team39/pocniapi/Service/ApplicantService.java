@@ -8,8 +8,9 @@ import java.util.Optional;
 
 public interface ApplicantService {
 
-    Optional<ApplicantDto> getApplicant(Long id);
+    ApplicantDto getApplicant(Long id);
 
     ApplicantDto create(ApplicantCreateDto applicantCreateDto);
+    void deleteById(Long id);
 
 }

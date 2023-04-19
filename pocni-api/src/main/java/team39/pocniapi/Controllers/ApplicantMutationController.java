@@ -18,4 +18,9 @@ public class ApplicantMutationController {
     public ApplicantDto createApplicant(@Argument ApplicantCreateDto input) {
         return applicantService.create(input);
     }
+
+    @MutationMapping
+    public void deleteApplicant(@Argument Long id) {
+        applicantService.deleteById(id);
+    }
 }
