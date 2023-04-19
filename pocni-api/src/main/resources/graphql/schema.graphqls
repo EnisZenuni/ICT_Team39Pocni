@@ -4,4 +4,5 @@ type Query {
 
 type Mutation {
     createApplicant(input: ApplicantCreateInput!): Applicant!
+    deleteApplicant(id: ID!): Boolean
 }

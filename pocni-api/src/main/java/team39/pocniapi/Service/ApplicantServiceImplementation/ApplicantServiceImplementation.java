@@ -24,8 +24,16 @@ public class ApplicantServiceImplementation implements ApplicantService {
         return ApplicantMapper.toDto(applicantRepository.save(applicant));
     }
 
+    @Transactional
     @Override
-    public Optional<ApplicantDto> getApplicant(Long id) {
-        return Optional.of(ApplicantMapper.toDto(applicantRepository.findById(id).orElseThrow()));
+    public void deleteById(Long id) {
+        applicantRepository.deleteById(id);
     }
+
+    @Override
+    public ApplicantDto getApplicant(Long id) {
+       return (ApplicantMapper.toDto(applicantRepository.getReferenceById(id)));
+    }
+
+
 }

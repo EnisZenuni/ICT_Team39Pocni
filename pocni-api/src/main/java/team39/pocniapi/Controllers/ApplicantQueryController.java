@@ -14,6 +14,6 @@ public class ApplicantQueryController {
 
     @QueryMapping
     public ApplicantDto applicant(@Argument Long id) {
-        return applicantService.getApplicant(id).orElseThrow();
+        return applicantService.getApplicant(id);
     }
 }
