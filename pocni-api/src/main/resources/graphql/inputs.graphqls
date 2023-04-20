@@ -4,3 +4,9 @@ input ApplicantCreateInput {
     email: String!
     password: String!
 }
+input CompanyCreateInput{
+    companyName : String!
+    companyDescription : String!
+    companyIdentificator : String!
+    password : String!
+}

@@ -1,8 +1,11 @@
 type Query {
     applicant(id: ID!): Applicant!
+    company(id : ID!): Company!
 }
 
 type Mutation {
     createApplicant(input: ApplicantCreateInput!): Applicant!
     deleteApplicant(id: ID!): Boolean
+    createCompany(input: CompanyCreateInput!): Company!
+    deleteCompany(id: ID!): Boolean
 }
