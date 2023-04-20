@@ -5,3 +5,10 @@ type Applicant {
     email: String!
     LocalDate: String
 }
+type Company {
+    id: ID
+    companyName: String!
+    companyDescription: String!
+    companyIdentificator: String!
+    password: String!
+}
