@@ -3,10 +3,11 @@ input ApplicantCreateInput {
     lastName: String!
     email: String!
     password: String!
+    skills: String!
 }
 input CompanyCreateInput{
-    companyName : String!
-    companyDescription : String!
-    companyIdentificator : String!
-    password : String!
+    companyName: String!
+    companyDescription: String!
+    companyIdentificator: String!
+    password: String!
 }

@@ -21,6 +21,7 @@ public class ApplicantDto {
 
     LocalDate dateOfBirth;
 
+    @NonNull String skills;
 
 
     public static ApplicantDto toDto(Applicant applicant) {

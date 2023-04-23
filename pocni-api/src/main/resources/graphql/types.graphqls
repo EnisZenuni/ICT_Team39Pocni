@@ -4,6 +4,7 @@ type Applicant {
     lastName: String!
     email: String!
     LocalDate: String
+    skills: String!
 }
 type Company {
     id: ID
@@ -11,4 +12,5 @@ type Company {
     companyDescription: String!
     companyIdentificator: String!
     password: String!
+    applicants: [Applicant]
 }
