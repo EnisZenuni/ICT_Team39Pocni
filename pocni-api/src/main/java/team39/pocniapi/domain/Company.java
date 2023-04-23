@@ -3,6 +3,8 @@ package team39.pocniapi.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @NoArgsConstructor
@@ -27,4 +29,7 @@ public class Company {
 
     @NonNull
     private String password;
+
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Applicant> applicants;
 }

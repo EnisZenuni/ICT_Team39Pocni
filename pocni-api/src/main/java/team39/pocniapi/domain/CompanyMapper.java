@@ -6,6 +6,7 @@ public interface CompanyMapper {
                 companyName(company.getName()).
                 companyDescription(company.getCompanyDescription()).
                 companyIdentificator(company.getCompanyIdentificator())
+                .applicants(company.getApplicants())
                 .build();
     }
 

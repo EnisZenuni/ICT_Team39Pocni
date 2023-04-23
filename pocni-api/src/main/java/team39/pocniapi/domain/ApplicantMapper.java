@@ -6,7 +6,9 @@ public interface ApplicantMapper {
                 firstName(applicant.getFirstName()).
                 lastName(applicant.getLastName()).
                 email(applicant.getEmail()).
-                dateOfBirth(applicant.getDateOfBirth()).build();
+                dateOfBirth(applicant.getDateOfBirth())
+                .skills((applicant.getSkills()))
+                .build();
     }
 
     static Applicant toApplicantFromCreateApplicant(ApplicantCreateDto applicantCreateDto) {
@@ -15,6 +17,7 @@ public interface ApplicantMapper {
                 .lastName(applicantCreateDto.getLastName())
                 .email(applicantCreateDto.getEmail())
                 .password(applicantCreateDto.getPassword())
+                .skills(applicantCreateDto.getSkills())
                 .build();
     }
 }

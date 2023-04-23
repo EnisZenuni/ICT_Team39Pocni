@@ -5,6 +5,8 @@ import lombok.NonNull;
 import lombok.Value;
 import lombok.extern.jackson.Jacksonized;
 
+import java.util.List;
+
 @Builder
 @Value
 @Jacksonized
@@ -16,6 +18,7 @@ public class CompanyDto {
     @NonNull String companyDescription;
 
     @NonNull String companyIdentificator;
-    @NonNull String password;
+
+    List<Applicant> applicants;
 
 }

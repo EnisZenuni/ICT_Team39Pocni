@@ -18,4 +18,6 @@ public class ApplicantCreateDto {
     @NonNull String email;
 
     @NonNull String password;
+
+    @NonNull String skills;
 }

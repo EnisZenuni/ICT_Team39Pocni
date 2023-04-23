@@ -24,4 +24,9 @@ public class CompanyMutationController {
     public void deleteCompany(@Argument Long id) {
         companyService.deleteById(id);
     }
+
+    @MutationMapping
+    public CompanyDto addApplicantToCompany(@Argument Long companyId,@Argument Long applicantId) {
+        return companyService.apply(companyId, applicantId);
+    }
 }

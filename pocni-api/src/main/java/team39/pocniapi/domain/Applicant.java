@@ -31,5 +31,11 @@ public class Applicant {
     private LocalDate dateOfBirth;
 
     @NonNull
+    private String skills;
+    @NonNull
     private String password;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    private Company company;
 }

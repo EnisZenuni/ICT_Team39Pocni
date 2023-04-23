@@ -8,4 +8,5 @@ type Mutation {
     deleteApplicant(id: ID!): Boolean
     createCompany(input: CompanyCreateInput!): Company!
     deleteCompany(id: ID!): Boolean
+    addApplicantToCompany(companyId: ID!, applicantId: ID!): Company
 }
