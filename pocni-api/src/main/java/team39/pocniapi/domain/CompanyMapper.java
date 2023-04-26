@@ -1,5 +1,8 @@
 package team39.pocniapi.domain;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public interface CompanyMapper {
     static CompanyDto toDto(Company company) {
         return CompanyDto.builder().id(company.getId()).
@@ -17,5 +20,10 @@ public interface CompanyMapper {
                 .companyIdentificator(companyCreateDto.getCompanyIdentificator())
                 .password(companyCreateDto.getPassword())
                 .build();
+    }
+    static List<CompanyDto> toDto(List<Company> companiesList) {
+        return companiesList.stream()
+                .map(CompanyMapper::toDto)
+                .collect(Collectors.toList());
     }
 }

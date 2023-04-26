@@ -1,6 +1,8 @@
 type Query {
     applicant(id: ID!): Applicant!
     company(id : ID!): Company!
+    applicants: [Applicant!]!
+    companies: [Company!]!
 }
 
 type Mutation {

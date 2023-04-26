@@ -8,6 +8,8 @@ import team39.pocniapi.Repository.CompanyRepository;
 import team39.pocniapi.Service.CompanyService;
 import team39.pocniapi.domain.*;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class CompanyServiceImplementation implements CompanyService {
@@ -37,5 +39,10 @@ public class CompanyServiceImplementation implements CompanyService {
         Company company = companyRepository.getReferenceById(companyId);
         company.getApplicants().add(applicantRepository.getReferenceById(applicantId));
         return CompanyMapper.toDto(companyRepository.save(company));
+    }
+
+    @Override
+    public List<CompanyDto> companies() {
+        return CompanyMapper.toDto(companyRepository.findAll());
     }
 }

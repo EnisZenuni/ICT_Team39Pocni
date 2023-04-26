@@ -10,7 +10,7 @@ import team39.pocniapi.domain.ApplicantCreateDto;
 import team39.pocniapi.domain.ApplicantDto;
 import team39.pocniapi.domain.ApplicantMapper;
 
-import java.util.Optional;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -28,6 +28,11 @@ public class ApplicantServiceImplementation implements ApplicantService {
     @Override
     public void deleteById(Long id) {
         applicantRepository.deleteById(id);
+    }
+
+    @Override
+    public List<ApplicantDto> applicants() {
+        return ApplicantMapper.toDto(applicantRepository.findAll());
     }
 
     @Override
