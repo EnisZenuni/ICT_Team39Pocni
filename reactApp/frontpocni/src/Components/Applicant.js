@@ -9,8 +9,6 @@ export default function Applicant(props) {
 
     const t = useContext(ContextAdmin)
 
-
-
   const [addApplicant] = useMutation(CREATE_APPLICANT, {
     variables: {
       firstName: "Lirim",
@@ -26,9 +24,7 @@ export default function Applicant(props) {
   if(error) return <><p>error</p></>
   if(loading) return <><p>loading</p></>
 
-  if(data){
-    console.log(data)
-  }
+
   return (
     <>
 

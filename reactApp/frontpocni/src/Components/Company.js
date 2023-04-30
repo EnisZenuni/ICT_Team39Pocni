@@ -13,10 +13,10 @@ export default function Company(props) {
 
   const [addCompany] = useMutation(CREATE_COMPANY, {
     variables: {
-      companyName: "Sorsix",
-      companyIdentificator: "16623Sorsix",
-      companyDescription: "Software developing - company",
-      password:"asd123asd",
+      companyName: "Facebook",
+      companyIdentificator: "fb2996",
+      companyDescription: "Social media app",
+      password:"aaaaa",
     },
   });
 
@@ -25,9 +25,7 @@ export default function Company(props) {
   if(error) return <><p>error</p></>
   if(loading) return <><p>loading</p></>
 
-  if(data){
-    console.log(data)
-  }
+
 
   return (
     <>
