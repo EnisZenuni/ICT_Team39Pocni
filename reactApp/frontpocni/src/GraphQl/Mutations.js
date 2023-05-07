@@ -38,12 +38,29 @@ mutation($companyName: String!, $companyIdentificator: String!, $companyDescript
 
 `
 
-// export const DELETE_APPLICANT = gql`
+export const DELETE_APPLICANT = gql`
+mutation ($id: ID!) {
+    deleteApplicant(id: $id ) 
+  }
+`
 
+export const DELETE_COMPANY = gql`
+mutation ($id: ID!) {
+    deleteCompany(id: $id ) 
+  }
 
-// `
+`
 
-// export const DELETE_COMPANY = gql`
-
-
-// `
+export const ADD_APPLICANT_TO_COMPANY =gql `
+mutation ($companyId: ID!, $applicantId: ID!) {
+    addApplicantToCompany(companyId: $companyId, applicantId: $applicantId) {
+      companyName
+      companyDescription
+      applicants {
+        companyId
+        firstName
+        lastName
+      }
+    }
+  }
+`
