@@ -12,6 +12,11 @@ export default function MainPage(props) {
     const [defaultPage, setDefaultPage] = useState('HOME')
 
     const handleClick = (option) => {
+      if(option === 'HOME'){
+        window.location.reload()
+
+      }
+
         setDefaultPage(option);
       };
 
