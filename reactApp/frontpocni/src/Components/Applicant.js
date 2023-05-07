@@ -68,6 +68,8 @@ export default function Applicant(props) {
   if (loading) return <><p>loading</p></>
 
   const rows = data.applicants
+
+
   return (
     <>
       <h2>CREATE APPLICANT</h2>

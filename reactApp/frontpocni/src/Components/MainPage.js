@@ -16,6 +16,7 @@ export default function MainPage(props) {
         window.location.reload()
 
       }
+
         setDefaultPage(option);
       };
 

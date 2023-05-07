@@ -47,6 +47,7 @@ export default function Company(props) {
       companyIdentificator: formState.companyIdentificator,
       companyDescription: formState.companyDescription,
       password: formState.password,
+
     },
     refetchQueries: [{ query: FETCH_COMPANIES }]
   });
@@ -69,6 +70,7 @@ export default function Company(props) {
     console.log(data)
   }
   const rows = data.companies
+
 
   return (
     <>

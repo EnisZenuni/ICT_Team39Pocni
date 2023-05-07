@@ -5,6 +5,7 @@ import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import Apply from './Apply';
 
 
+
 export default function Home(props) {
 
     const {error, data, loading}= useQuery(FETCH_COMPANIES)
@@ -16,6 +17,7 @@ export default function Home(props) {
     if (selectedCompany) {
       return <Apply company={selectedCompany} />;
     }
+
 
     if(error) return <><p>error</p></>
     if(loading) return <><p>loading</p></>
@@ -39,6 +41,7 @@ export default function Home(props) {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   {company.companyDescription}
+
                 </Typography>
               </CardContent>
             </Card>
