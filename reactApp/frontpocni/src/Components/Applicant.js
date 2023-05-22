@@ -5,6 +5,9 @@ import { ContextAdmin } from '../ContextAdmin/ContextAdmin';
 import { Box, Button, Grid, Paper, Tab, Table, TableBody, TableCell, TableHead, TableRow, TextField } from "@mui/material";
 import { CREATE_APPLICANT, CREATE_COMPANY, DELETE_APPLICANT } from "../GraphQl/Mutations";
 import { FETCH_APPLICANTS } from "../GraphQl/Queries";
+import Home from "./Home";
+import MainPage from "./MainPage";
+import NavBar from "./NavBar";
 
 export default function Applicant(props) {
 
@@ -72,6 +75,7 @@ export default function Applicant(props) {
 
   return (
     <>
+    <NavBar />
       <h2>CREATE APPLICANT</h2>
       <br></br>
       <Grid container spacing={1}>

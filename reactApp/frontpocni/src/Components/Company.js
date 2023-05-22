@@ -5,6 +5,7 @@ import { Box, Button, Grid, Paper, Table, TableBody, TableCell, TableHead, Table
 import { CREATE_APPLICANT, CREATE_COMPANY, DELETE_COMPANY } from "../GraphQl/Mutations";
 import { FETCH_COMPANIES } from "../GraphQl/Queries";
 import { DeleteForever } from "@mui/icons-material";
+import NavBar from "./NavBar";
 
 export default function Company(props) {
 
@@ -74,6 +75,8 @@ export default function Company(props) {
 
   return (
     <>
+        <NavBar />
+
       <h2>CREATE COMPANY</h2>
 
       <br></br>

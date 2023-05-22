@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { FETCH_COMPANIES } from '../GraphQl/Queries';
 import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import Apply from './Apply';
+import NavBar from './NavBar';
 
 
 
@@ -13,7 +14,7 @@ export default function Home(props) {
     const handleCardClick = (company) => {
       setSelectedCompany(company);
     };
-    console.log(selectedCompany)
+
     if (selectedCompany) {
       return <Apply company={selectedCompany} />;
     }
@@ -25,6 +26,7 @@ export default function Home(props) {
    
   return (
     <>
+    <NavBar/>
       <Typography variant="h4" gutterBottom >Job announcements</Typography>
       <Grid container spacing={3}>
         {data.companies.map(company => (

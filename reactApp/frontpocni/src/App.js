@@ -5,15 +5,23 @@ import { ContextAdmin } from './ContextAdmin/ContextAdmin';
 import Company from './Components/Company';
 import Applicant from './Components/Applicant';
 import MainPage from './Components/MainPage';
-
-
+import LoginPage from './Components/LoginPage';
+import Home from './Components/Home';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
+import Apply from './Components/Apply';
 
 function App() {
-  const c = ["test", "test2"]
   return (
-    <ContextAdmin.Provider value={c}>
-        <MainPage/>
-     </ContextAdmin.Provider>
+        <Routes>
+          <Route path='/' element={<LoginPage/>}/>
+          <Route path='/Applicant' element={<Applicant/>} />
+          <Route path='/Company' element={<Company/>} />
+          <Route path='/Home' element={<Home/>} />
+          <Route path='/Details/:companyId' element={<Apply />} />
+
+
+        </Routes>
   );
 }
 
